@@ -6,10 +6,10 @@
  String password = request.getParameter("password"); 
  
  Class.forName ("com.mysql.jdbc.Driver"); 
- Connection con = DriverManager.getConnection("jdbc:mysql://weblogic.csuizwui246q.us-east-1.rds.amazonaws.com:3306/Weblogicdb", "admin", "admin123");
+ Connection con = DriverManager.getConnection("jdbc:mysql://43.231.124.162:3306/sample", "root" , "msppoc123");
  Statement st = con.createStatement(); 
  ResultSet rs; 
- rs = st.executeQuery("select * from userdata where username='" + userName + "' and password='" + password + "'");
+ rs = st.executeQuery("select * from user where username='" + userName + "' and password='" + password + "'");
 	if (rs.next()) 
 		{ 
 			session.setAttribute("userid", userName); 
